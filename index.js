@@ -12,6 +12,10 @@ module.exports = {
     "es6": true,
   },
 
+  "plugins": [
+    "react"
+  ],
+
   "rules": {
     /*
      * Possible Errors
@@ -30,7 +34,7 @@ module.exports = {
     "no-empty": 2,
     "no-ex-assign": 2,
     "no-extra-boolean-cast": 2,
-    "no-extra-parens": 2,
+    "no-extra-parens": 0,
     "no-extra-semi": 2,
     "no-func-assign": 2,
     "no-inner-declarations": 2,
@@ -73,7 +77,7 @@ module.exports = {
     "no-floating-decimal": 2,
     "no-implicit-coercion": [2, { "boolean": false }],
     "no-implied-eval": 2,
-    "no-invalid-this": 2,
+    "no-invalid-this": 0,
     "no-iterator": 2,
     "no-labels": 2,
     "no-lone-blocks": 2,
@@ -159,7 +163,7 @@ module.exports = {
     "func-style": 0,
     "id-length": 0,
     "id-match": 0,
-    "indent": [2, 2],
+    "indent": [2, 2, { "SwitchCase": 1 }],
     "jsx-quotes": [2, "prefer-double"],
     "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
     "linebreak-style": 2,
@@ -207,7 +211,7 @@ module.exports = {
     "space-in-parens": [2, "never"],
     "space-infix-ops": 2,
     "space-return-throw-case": 2,
-    "space-unary-ops": [2, { "words": true, "nonwords": false }],
+    "space-unary-ops": 0,
     "spaced-comment": [2, "always", { "markers": ["*"] }],
     "wrap-regex": 2,
 
@@ -215,7 +219,7 @@ module.exports = {
      * ES6
      */
 
-    "arrow-body-style": [2, "as-needed"],
+    "arrow-body-style": 0,
     "arrow-parens": 0,
     "arrow-spacing": [2, { "before": true, "after": true }],
     "constructor-super": 2,
@@ -226,12 +230,76 @@ module.exports = {
     "no-dupe-class-members": 2,
     "no-this-before-super": 2,
     "no-var": 2,
-    "object-shorthand": 2,
+    "object-shorthand": [2, "properties"],
     "prefer-arrow-callback": 0,
     "prefer-const": 2,
     "prefer-reflect": 0,
     "prefer-spread": 2,
     "prefer-template": 2,
-    "require-yield": 0
+    "require-yield": 0,
+
+    /*
+     * React Plugin
+     */
+
+    "react/display-name": [2, { "acceptTranspilerName": true }],
+    "react/forbid-prop-types": [2, { "forbid": ["any"] }],
+    "react/jsx-boolean-value": [2, "always"],
+    "react/jsx-closing-bracket-location": [2, { "selfClosing": "after-props", "nonEmpty": "after-props"}],
+    "react/jsx-curly-spacing": [2, "never"],
+    "react/jsx-handler-names": 2,
+    "react/jsx-indent-props": [2, 2],
+    "react/jsx-key": 2,
+    "react/jsx-max-props-per-line": [2, { "maximum": 4 }],
+    "react/jsx-no-bind": 2,
+    "react/jsx-no-duplicate-props": 2,
+    "react/jsx-no-literals": 0,
+    "react/jsx-no-undef": 2,
+    "react/jsx-pascal-case": 2,
+    "react/jsx-sort-props": 0,
+    "react/jsx-sort-prop-types": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/no-danger": 2,
+    "react/no-did-mount-set-state": 2,
+    "react/no-did-update-set-state": 2,
+    "react/no-direct-mutation-state": 2,
+    "react/no-multi-comp": [2, { "ignoreStateless": true }],
+    "react/no-set-state": 0,
+    "react/no-unknown-property": 2,
+    "react/prefer-es6-class": 0,
+    "react/prop-types": 2,
+    "react/react-in-jsx-scope": 2,
+    "react/require-extension": 0,
+    "react/self-closing-comp": 2,
+    "react/sort-comp": [2, {
+      order: [
+        'lifecycle',
+        'everything-else',
+        'render'
+      ],
+      groups: {
+        lifecycle: [
+          'displayName',
+          'propTypes',
+          'contextTypes',
+          'childContextTypes',
+          'mixins',
+          'statics',
+          'getDefaultProps',
+          'getInitialState',
+          'getStateFromStores',
+          'getChildContext',
+          'componentWillMount',
+          'componentDidMount',
+          'componentWillReceiveProps',
+          'shouldComponentUpdate',
+          'componentWillUpdate',
+          'componentDidUpdate',
+          'componentWillUnmount'
+        ]
+      }
+    }],
+    "react/wrap-multilines": 2
   }
 }

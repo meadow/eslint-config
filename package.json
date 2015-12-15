@@ -1,6 +1,6 @@
 {
   "name": "@meadow/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extendable ESLint configuration by Meadow",
   "main": "index.js",
   "repository": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/meadow/eslint-config/issues"
   },
-  "homepage": "https://github.com/meadow/eslint-config"
+  "homepage": "https://github.com/meadow/eslint-config",
+  "dependencies": {
+    "eslint-plugin-react": "^3.11.3"
+  }
 }
