@@ -1,6 +1,6 @@
 {
   "name": "@meadow/eslint-config",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Extendable ESLint configuration by Meadow",
   "main": "index.js",
   "repository": {

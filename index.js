@@ -198,7 +198,7 @@ module.exports = {
     "operator-assignment": 0,
     "operator-linebreak": 0,
     "padded-blocks": 0,
-    "quote-props": [2, "as-needed"],
+    "quote-props": [2, "as-needed", { "keywords": true, "unnecessary": false }],
     "quotes": [2, "single"],
     "require-jsdoc": 0,
     "semi-spacing": [2, {"before": false, "after": true}],
