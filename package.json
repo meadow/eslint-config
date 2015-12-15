@@ -1,0 +1,24 @@
+{
+  "name": "@meadow/eslint-config",
+  "version": "1.0.0",
+  "description": "Extendable ESLint configuration by Meadow",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meadow/eslint-config.git"
+  },
+  "author": [
+    "Rick Harrison"
+  ],
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslint-config",
+    "meadow"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meadow/eslint-config/issues"
+  },
+  "homepage": "https://github.com/meadow/eslint-config"
+}
