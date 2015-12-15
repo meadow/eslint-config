@@ -247,7 +247,7 @@ module.exports = {
     "react/jsx-boolean-value": [2, "always"],
     "react/jsx-closing-bracket-location": [2, { "selfClosing": "after-props", "nonEmpty": "after-props"}],
     "react/jsx-curly-spacing": [2, "never"],
-    "react/jsx-handler-names": 0,
+    "react/jsx-handler-names": 2,
     "react/jsx-indent-props": [2, 2],
     "react/jsx-key": 2,
     "react/jsx-max-props-per-line": [2, { "maximum": 5 }],
