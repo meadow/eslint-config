@@ -15,7 +15,3 @@ npm install --save-dev @meadow/eslint-config
     "extends": "@meadow"
 }
 ```
-
-- - -
-
-[![ghit.me](https://ghit.me/badge.svg?repo=meadow/eslint-config)](https://ghit.me/repo/meadow/eslint-config)
