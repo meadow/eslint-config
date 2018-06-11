@@ -145,7 +145,7 @@ module.exports = {
      * Node.js/Common JS
      */
 
-    "callback-return": [2, ["callback", "cb", "next"]],
+    "callback-return": [2, ["callback", "cb"]],
     "global-require": 2,
     "handle-callback-err": [1, "^(err|error)$"],
     "no-mixed-requires": 0,
