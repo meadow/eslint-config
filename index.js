@@ -1,9 +1,8 @@
 module.exports = {
   "extends": "eslint:recommended",
-  "parser": "babel-eslint",
 
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 8,
     "ecmaFeatures": {
       "jsx": true
     }
@@ -146,7 +145,7 @@ module.exports = {
      * Node.js/Common JS
      */
 
-    "callback-return": [2, ["callback", "cb", "next"]],
+    "callback-return": [2, ["callback", "cb"]],
     "global-require": 2,
     "handle-callback-err": [1, "^(err|error)$"],
     "no-mixed-requires": 0,
