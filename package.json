@@ -1,6 +1,6 @@
 {
   "name": "@meadow/eslint-config",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Extendable ESLint configuration by Meadow",
   "main": "index.js",
   "repository": {
@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/meadow/eslint-config",
   "dependencies": {
-    "eslint-plugin-react": "^5.2.2"
+    "eslint-plugin-react": "^7.10.0"
   }
 }
