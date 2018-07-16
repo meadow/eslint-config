@@ -1,17 +1,20 @@
 module.exports = {
-  "extends": "eslint:recommended",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
 
   "parserOptions": {
-    "ecmaVersion": 8,
+    "ecmaVersion": 2018,
     "ecmaFeatures": {
       "jsx": true
-    }
+    },
+    "sourceType": "module"
   },
 
   "env": {
     "browser": true,
-    "node": true,
-    "es6": true
+    "node": true
   },
 
   "plugins": [
@@ -23,6 +26,10 @@ module.exports = {
      * Possible Errors
      */
 
+    "for-direction": 2,
+    "getter-return": 2,
+    "no-await-in-loop": 2,
+    "no-compare-neg-zero": 2,
     "no-cond-assign": [2, "always"],
     "no-console": 2,
     "no-constant-condition": 2,
@@ -46,9 +53,11 @@ module.exports = {
     "no-prototype-builtins": 2,
     "no-regex-spaces": 2,
     "no-sparse-arrays": 2,
+    "no-template-curly-in-string": 2,
     "no-unexpected-multiline": 2,
     "no-unreachable": 2,
     "no-unsafe-finally": 2,
+    "no-unsafe-negation": 2,
     "use-isnan": 2,
     "valid-jsdoc": 2,
     "valid-typeof": 2,
@@ -78,6 +87,7 @@ module.exports = {
     "no-extra-bind": 2,
     "no-fallthrough": 2,
     "no-floating-decimal": 2,
+    "no-global-assign": 2,
     "no-implicit-coercion": [2, { "boolean": false }],
     "no-implied-eval": 2,
     "no-implicit-globals": 2,
@@ -90,7 +100,6 @@ module.exports = {
     "no-magic-numbers": 0,
     "no-multi-spaces": 2,
     "no-multi-str": 2,
-    "no-native-reassign": 2,
     "no-new-func": 2,
     "no-new-wrappers": 2,
     "no-new": 2,
@@ -101,6 +110,7 @@ module.exports = {
     "no-proto": 2,
     "no-redeclare": 2,
     "no-return-assign": 2,
+    "no-return-await": 2,
     "no-script-url": 2,
     "no-self-assign": 2,
     "no-self-compare": 2,
@@ -111,10 +121,13 @@ module.exports = {
     "no-useless-call": 0,
     "no-useless-concat": 2,
     "no-useless-escape": 2,
+    "no-useless-return": 2,
     "no-void": 2,
     "no-warning-comments": [1, { "location": "anywhere" }],
     "no-with": 2,
+    "prefer-promise-reject-errors": 2,
     "radix": 2,
+    "require-await": 2,
     "vars-on-top": 0,
     "wrap-iife": 2,
     "yoda": 2,
@@ -130,7 +143,6 @@ module.exports = {
      */
 
     "init-declarations": 0,
-    "no-catch-shadow": 2,
     "no-delete-var": 2,
     "no-label-var": 2,
     "no-shadow-restricted-names": 2,
@@ -148,17 +160,22 @@ module.exports = {
     "callback-return": [2, ["callback", "cb"]],
     "global-require": 2,
     "handle-callback-err": [1, "^(err|error)$"],
+    "no-buffer-constructor": 2,
     "no-mixed-requires": 0,
     "no-new-require": 2,
     "no-path-concat": 2,
+    "no-process-env": 2,
     "no-process-exit": 2,
+    "no-restricted-modules": 0
     "no-sync": 2,
 
     /*
      * Stylistic
      */
 
+    "array-bracket-newline": [2, "consistent"],
     "array-bracket-spacing": [2, "never"],
+    "array-element-newline": [2, "consistent"],
     "block-spacing": [2, "always"],
     "brace-style": [2, "1tbs"],
     "camelcase": [2, { properties: "never" }],
@@ -168,17 +185,24 @@ module.exports = {
     "computed-property-spacing": [2, "never"],
     "consistent-this": 0,
     "eol-last": 2,
+    "func-call-spacing": [2, "never"],
+    "func-name-matching": [2, "always"],
     "func-names": 0,
     "func-style": 0,
+    "function-paren-newline": [2, "consistent"],
     "id-length": 0,
     "id-match": 0,
+    "implicit-arrow-linebreak": [2, "beside"],
     "indent": [2, 2, { "SwitchCase": 1 }],
     "jsx-quotes": [2, "prefer-double"],
     "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
+    "keyword-spacing": [2, { "before": true, "after": true }],
     "linebreak-style": 2,
     "lines-around-comment": [2, { "beforeBlockComment": false, "afterBlockComment": true, "beforeLineComment": false, "afterLineComment": false }],
     "max-depth": [1, 4],
     "max-len": 0,
+    "max-lines": 0,
+    "max-lines-per-function": 0,
     "max-nested-callbacks": 0,
     "max-params": 0,
     "max-statements": 0,
@@ -194,6 +218,7 @@ module.exports = {
     "no-lonely-if": 2,
     "no-mixed-operators": 1,
     "no-mixed-spaces-and-tabs": 2,
+    "no-multi-assign": 2,
     "no-multiple-empty-lines": 2,
     "no-negated-condition": 0,
     "no-nested-ternary": 2,
@@ -201,12 +226,16 @@ module.exports = {
     "no-plusplus": 0,
     "no-restricted-syntax": 2,
     "no-spaced-func": 2,
+    "no-tabs": 2,
     "no-ternary": 0,
     "no-trailing-spaces": 2,
     "no-underscore-dangle": 0,
     "no-unneeded-ternary": 2,
+    "no-whitespace-before-property": 2,
+    "nonblock-statement-body-position": [2, "beside"],
     "object-curly-newline": 0,
     "object-curly-spacing": [2, "always", { "objectsInObjects": false }],
+    "object-property-newline": [2, { "allowAllPropertiesOnSameLine": true }],
     "one-var": 0,
     "one-var-declaration-per-line": 2,
     "operator-assignment": 0,
@@ -217,8 +246,9 @@ module.exports = {
     "require-jsdoc": 0,
     "semi-spacing": [2, {"before": false, "after": true}],
     "semi": [2, "always"],
+    "semi-style": [2, "last"],
+    "sort-keys": 2,
     "sort-vars": 0,
-    "keyword-spacing": [2, { "before": true, "after": true }],
     "space-before-blocks": [2, "always"],
     "space-before-function-paren": [2, "always"],
     "space-in-parens": [2, "never"],
