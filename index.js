@@ -14,7 +14,8 @@ module.exports = {
 
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "es6": true
   },
 
   "plugins": [
@@ -242,12 +243,12 @@ module.exports = {
     "operator-linebreak": 0,
     "padded-blocks": 0,
     "quote-props": [2, "as-needed", { "keywords": true, "unnecessary": false }],
-    "quotes": [2, "single"],
+    "quotes": [2, "single", { "allowTemplateLiterals": true }],
     "require-jsdoc": 0,
     "semi-spacing": [2, {"before": false, "after": true}],
     "semi": [2, "always"],
     "semi-style": [2, "last"],
-    "sort-keys": 2,
+    "sort-keys": 0,
     "sort-vars": 0,
     "space-before-blocks": [2, "always"],
     "space-before-function-paren": [2, "always"],
